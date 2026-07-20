@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <%- include("partials/header") %>
+
+    <h1>Edit Grocery</h1>
+
+    <form action="/edit" method="POST">
+      <input type="hidden" name="index" value="<%= index %>" />
+
+      <input name="name" value="<%= grocery.name %>" />
+
+      <input name="manufacturer" value="<%= grocery.manufacturer %>" />
+
+      <input name="quantity" value="<%= grocery.quantity %>" />
+
+      <input name="daysLeftToUse" value="<%= grocery.daysLeftToUse %>" />
+
+      <input
+        name="placeWhereAvailable"
+        value="<%= grocery.placeWhereAvailable %>"
+      />
+
+      <button>Save</button>
+    </form>
+  </body>
+</html>

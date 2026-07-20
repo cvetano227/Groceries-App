@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <%- include("partials/header") %>
+
+    <h1>Add Grocery</h1>
+
+    <form action="/form" method="POST">
+      <input name="name" placeholder="Name" />
+
+      <input name="manufacturer" placeholder="Manufacturer" />
+
+      <input name="quantity" placeholder="Quantity" />
+
+      <input name="daysLeftToUse" placeholder="Days left to use" />
+
+      <input name="placeWhereAvailable" placeholder="Place available" />
+
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

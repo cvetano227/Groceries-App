@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+<%- include("partials/header") %>
+
+
+<h1>Grocery list</h1>
+
+
+<table border="1">
+
+<tr>
+
+<th>Name</th>
+<th>Manufacturer</th>
+<th>Quantity</th>
+<th>Days left</th>
+<th>Place</th>
+<th>Actions</th>
+
+</tr>
+
+
+
+<% data.forEach((grocery,index)=>{ %>
+
+
+<tr>
+
+<td><%= grocery.name %></td>
+
+<td><%= grocery.manufacturer %></td>
+
+<td><%= grocery.quantity %></td>
+
+<td><%= grocery.daysLeftToUse %></td>
+
+<td><%= grocery.placeWhereAvailable %></td>
+
+
+<td>
+
+<a href="/delete?groceryIndex=<%= index %>">
+Delete
+</a>
+
+
+<a href="/edit?groceryIndex=<%= index %>">
+Edit
+</a>
+
+
+</td>
+
+
+</tr>
+
+
+
+<% }) %>
+
+
+
+</table>
+
+
+</body>
+
+</html>
